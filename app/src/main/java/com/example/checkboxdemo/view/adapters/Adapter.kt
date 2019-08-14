@@ -25,7 +25,7 @@ class Adapter(private val checkList: ArrayList<Model>) : RecyclerView.Adapter<Ad
     override fun onBindViewHolder(holder: CheckBoxHolder, position: Int) {
         holder.checkBox?.text = checkList[position].value
 
-        holder.checkBox?.setOnCheckedChangeListener { _, b ->
+        holder.checkBox?.setOnCheckedChangeListener { compoundButton, b ->
             if (b) {
                 checkList[position].checked = true
                 array.add(checkList[position].value.toString())

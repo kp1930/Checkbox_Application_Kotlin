@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.example.checkboxdemo.view.fragments.CheckBoxFragment
 import com.example.checkboxdemo.R
+import com.example.checkboxdemo.view.adapters.Adapter
 import kotlinx.android.synthetic.main.activity_first.*
 
 class FirstActivity : AppCompatActivity() {
@@ -48,6 +49,11 @@ class FirstActivity : AppCompatActivity() {
         setContentView(R.layout.activity_first)
 
         setupViewPager(viewPager)
+    }
+
+    override fun onBackPressed() {
+        Adapter.array.clear()
+        finish()
     }
 
     private fun setupViewPager(viewPager: ViewPager) {

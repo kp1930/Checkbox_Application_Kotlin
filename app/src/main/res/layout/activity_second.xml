@@ -11,4 +11,15 @@
             android:background="@android:color/transparent"
             android:numColumns="2"/>
 
+    <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Check-box selected"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+
 </RelativeLayout>
